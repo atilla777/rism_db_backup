@@ -14,7 +14,7 @@ Configure cron (backup will be done under rism user account):
 ```bash
 sudo crontab -u rism -e
 ```
-Insert line in crontab config:
+Insert line in crontab config (customize crontab start time as you like):
 ```
 15 3 * * * /path/to/script/rism_db_backup.sh > /dev/null 2>&1
 ```
