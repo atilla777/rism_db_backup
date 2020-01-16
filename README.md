@@ -16,11 +16,11 @@ sudo crontab -u rism -e
 ```
 Insert line in crontab config (customize crontab start time as you like):
 ```
-15 3 * * * /path/to/script/rism_db_backup.sh > /dev/null 2>&1
+0 3 * * * /path/to/script/rism_db_backup.sh > /dev/null 2>&1
 ```
 In postgresql pg_hba.conf file should be present something like this line:
 ```
-host    replication     rism             127.0.0.1/32            md5
+local    replication     rism                       md5
 ```
 After place this line postgresql should be restarted:
 ```bash
